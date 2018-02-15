@@ -5,11 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using HackIt2018Template.Models;
+using Models.Domain;
 
 namespace HackIt2018Template.Controllers
 {
     public class HomeController : Controller
     {
+        private IUserRepository _repo;
+
+        public HomeController(IUserRepository repo)
+        {
+            this._repo = repo;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -32,6 +40,11 @@ namespace HackIt2018Template.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public async void RepoTest()
+        {
+            User user = await _repo.GetUserAsync(1);
         }
     }
 }

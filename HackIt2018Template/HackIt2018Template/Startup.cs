@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using HackIt2018Template.Data;
 using HackIt2018Template.Models;
 using HackIt2018Template.Services;
+using Models.Domain;
+using Repository.DataAccess;
 
 namespace HackIt2018Template
 {
@@ -35,6 +37,8 @@ namespace HackIt2018Template
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
 
             services.AddMvc();
         }
