@@ -1,0 +1,12 @@
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\bin\Debug\netcoreapp2.0\HackIt2018Template.deps.json
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\bin\Debug\netcoreapp2.0\HackIt2018Template.runtimeconfig.json
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\bin\Debug\netcoreapp2.0\HackIt2018Template.runtimeconfig.dev.json
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\bin\Debug\netcoreapp2.0\HackIt2018Template.dll
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\bin\Debug\netcoreapp2.0\HackIt2018Template.pdb
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\obj\Debug\netcoreapp2.0\HackIt2018Template.csprojResolveAssemblyReference.cache
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\obj\Debug\netcoreapp2.0\HackIt2018Template.csproj.CoreCompileInputs.cache
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\obj\Debug\netcoreapp2.0\HackIt2018Template.AssemblyInfoInputs.cache
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\obj\Debug\netcoreapp2.0\HackIt2018Template.AssemblyInfo.cs
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\obj\Debug\netcoreapp2.0\HackIt2018Template.dll
+C:\Users\GTadeon\Documents\Visual Studio 2017\Projects\HackIt2018Template\HackIt2018Template\obj\Debug\netcoreapp2.0\HackIt2018Template.pdb
