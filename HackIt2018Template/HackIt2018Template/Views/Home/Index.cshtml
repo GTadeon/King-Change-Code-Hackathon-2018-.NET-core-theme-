@@ -717,7 +717,7 @@
         var $menu = $("#menuF");
 
         $(window).scroll(function(){
-            if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+            if ( $(this).scrollTop() > 200 && $menu.hasClass("default") ){
                 $menu.fadeOut('fast',function(){
                     $(this).removeClass("default")
                            .addClass("fixed transbg")
