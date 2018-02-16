@@ -10,7 +10,6 @@
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -18,6 +17,7 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
 
 
 
@@ -58,7 +58,10 @@
     </script>
 
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="~/css/searchBar.css" />
 
 
 
@@ -72,12 +75,21 @@
             <div id="menuF" class="default">
                 <div class="container">
                     <div class="row">
-                        <div class="logo col-md-4">
+                        <div class="logo col-md-1">
                             <div>
                                 <a href="#">
                                     <img src="~/images/logo.png">
                                 </a>
                             </div>
+                        </div>
+                        <div class="logo col-md-3">
+                            <form action="" class="search-form" id="homeSearchBar">
+                                <div class="form-group has-feedback">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </div>
+                            </form>
                         </div>
                         <div class="col-md-8">
                             <div class="navmenu" style="text-align: center;">
