@@ -1,5 +1,6 @@
 ﻿using Models.Domain;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -10,21 +11,45 @@ namespace Repository.DataAccess
 {
     public class UserRepository : IUserRepository
     {
-        private static string baseUrl = "https://sportfinderapi.azurewebsites.net/api/";
 
-        public async Task<User> GetUserAsync(int userId)
+        private HttpHelper _context;
+
+        public UserRepository()
         {
-            var userString = await GetStringAsync(baseUrl + "Users/GetById?id=" + userId);
-            var user = JsonConvert.DeserializeObject<User>(userString);
-            return user;
+            _context = new HttpHelper();
+            _context.setBaseUrl("http://sportfinderapi.azurewebsites.net");
         }
 
-        private static async Task<string> GetStringAsync(string url)
+        public async Task<IEnumerable<Event>> GetAllEvents()
         {
-            using (var httpClient = new HttpClient())
+            HttpResponseMessage data = await _context.GetResponse("/api/Events/FindEvents?sportId=1&date=26/01/2018&cityName=Zagreb&freePlayers=0");
+            IEnumerable <Event> events = new List<Event>();
+
+            if (data.IsSuccessStatusCode)
             {
-                return await httpClient.GetStringAsync(url);
+                if (data.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    JArray jArray = JArray.Parse(await data.Content.ReadAsStringAsync());
+                    events = jArray.ToObject<List<Event>>();
+                }
             }
+            return events;
+        }
+
+        public async Task<Event> GetEvent(int id)
+        {
+            HttpResponseMessage data = await _context.GetResponse("/api/Events/GetEvent/1");
+            Event event1 = new Event();
+
+            if (data.IsSuccessStatusCode)
+            {
+                if (data.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    JObject jObject = JObject.Parse(await data.Content.ReadAsStringAsync());
+                    event1 = jObject.ToObject<Event>();
+                }
+            }
+            return event1;
         }
     }
 }

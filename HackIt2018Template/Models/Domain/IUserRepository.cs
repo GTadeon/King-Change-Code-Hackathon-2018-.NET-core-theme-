@@ -7,6 +7,7 @@ namespace Models.Domain
 {
     public interface IUserRepository
     {
-        Task<User> GetUserAsync(int userId);
+        Task<IEnumerable<Event>> GetAllEvents();
+        Task<Event> GetEvent(int id);
     }
 }
