@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using HackIt2018Template.Models;
 using Models.Domain;
+using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
 
 namespace HackIt2018Template.Controllers
 {
@@ -42,9 +41,15 @@ namespace HackIt2018Template.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public async void RepoTest()
+        [HttpGet]
+        public async Task<JArray> GetAllEvents()
         {
-            User user = await _repo.GetUserAsync(1);
+            IEnumerable<Event> events = await _repo.GetAllEvents();
+
+            //naprevi neke akcije s eventima
+
+            //serializiraj natrag u json
+            return JArray.FromObject(events);
         }
     }
 }
