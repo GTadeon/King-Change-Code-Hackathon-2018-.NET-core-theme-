@@ -1970,6 +1970,8 @@ margin-bottom: 35px !important;
 	box-shadow: 0px 2px 0px 0px #179abf;
 }
 
+
+
 #projects .columns1 .project {
 	width:100%;
 }
@@ -2070,3 +2072,24 @@ margin-bottom: 35px !important;
 /**/
 
 
+
+
+
+body::-webkit-scrollbar {
+    width: 0.62em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #696969;
+    outline: 1px solid slategrey;
+}
+
+
+
+.expandHeightByDefault {
+    height: 400px;
+}
